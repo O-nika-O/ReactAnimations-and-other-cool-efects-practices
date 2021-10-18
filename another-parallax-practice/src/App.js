@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 
 function App() {
 
   const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  
 
   const renderContent = () => (
     <>
@@ -29,8 +39,14 @@ function App() {
 
   return (
     <section className="Parallax">
-      <div className="Parallax__background" />
-      <div className="Parallax__background-triangles" />
+      <div
+        className="Parallax__background"
+        style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
+      />
+      <div
+        className="Parallax__background-triangles"
+        style={{ transform: `translateY(${offsetY * 0.8}px)` }}
+      />
       <div className="Parallax__content">{renderContent()}</div>
     </section>
   );
