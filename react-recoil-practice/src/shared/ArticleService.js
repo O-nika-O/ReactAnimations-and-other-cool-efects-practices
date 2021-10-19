@@ -47,6 +47,7 @@ class ArticleService {
         }
     ];
 
+
     static getAll() {
         // Simulate backend call by resolving the Promise after 500ms
         return new Promise((resolve) => {
