@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Halloween</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <img src="./img/images/bg.jpg" id="bg">
+        <img src="./img/images/bats.png" id="bats">
+        <img src="./img/images/castle.png" id="castle">
+        <img src="./img/images/wolf.png" id="wolf">
+        <img src="./img/images/img.png" id="img">
+    </section>
+    <div class="sec">
+        <div class="content">
+            <h2>Happy Halloween</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, eum? Asperiores, aperiam in accusantium, autem fuga maiores minus illo totam sit ipsa pariatur ullam consectetur sunt iste error! Beatae porro repellat voluptatibus corrupti dicta hic nulla repudiandae labore quaerat, tempora eos debitis, modi praesentium! Vero porro, error explicabo tempora, minima temporibus incidunt placeat, ad corporis sint expedita voluptas in blanditiis velit quos iste aperiam. Provident libero, debitis vitae id maxime quidem animi excepturi minima cupiditate molestias ducimus incidunt facilis est hic. Nostrum unde cupiditate aut ullam. Nemo corporis pariatur tempora obcaecati veniam, totam atque, fuga facere maxime consequuntur veritatis quos consectetur cupiditate rerum iure sapiente numquam eum dolore voluptatibus similique? Debitis natus voluptatem labore fugiat magnam soluta omnis, harum velit dicta dolor doloremque, tempora quo! Id delectus dolores vitae? Beatae officiis odit rerum atque. Neque esse, consectetur laborum quo quae, libero corporis aperiam, ullam quos dolore officiis adipisci non! Quas sapiente corrupti adipisci eaque consequuntur eos dolore voluptates, aut amet, officiis dolor officia in, voluptas illo. Eum necessitatibus consectetur obcaecati quam asperiores eveniet voluptas molestias esse unde tempora. Ad, quidem quo tenetur sapiente iusto voluptate voluptatem unde natus similique asperiores cumque ullam odit fugiat suscipit sed doloremque quos, nulla deleniti earum corporis rerum numquam obcaecati. Voluptate aliquid incidunt, aut in vel minus dolorum eos voluptatibus sequi. Cupiditate accusamus totam voluptates aliquid, distinctio veniam voluptatem, praesentium impedit amet ab quia doloribus ipsam provident ut quaerat maxime minima atque non, sit cum iure soluta a odio. Eveniet nesciunt impedit atque corporis, vero consequatur quaerat quos commodi rerum ipsum nostrum nam numquam obcaecati sit labore doloremque ipsam amet nobis deleniti exercitationem quia totam magnam cum voluptatem. Et iste modi pariatur ipsam natus quae, aspernatur itaque, repellendus sint cum officia alias necessitatibus consequuntur debitis accusantium! Ducimus nihil ipsa cumque recusandae expedita! Iure, dolores accusantium.</p>
+            <div class="sing">
+                <img class="lunita" src="./img/images/lunita.gif" alt="lunita">
+                <h3>_nika_</h3>
+                <img class="lunita" id="right" src="./img/images/lunita.gif" alt="lunita">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.to("#img",{
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            x : 1500,
+            y: 500,
+        })
+
+        gsap.from("#wolf",{
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            x : 400,
+        })
+
+        gsap.from("#castle",{
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            x : -100,
+        })
+
+        gsap.to("#bats",{
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            scale : 1.5,
+        })
+    </script>
+</body>
+</html>
